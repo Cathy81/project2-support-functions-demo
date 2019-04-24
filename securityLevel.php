@@ -1,9 +1,10 @@
-<?php 
-$dir= dirname(dirname(__FILE__)); //get /project2
-require_once $dir.'/DBfuncs/sqlConn.php';
-require_once $dir.'/DBfuncs/sqlSts.php';
-$security=$_GET['value'];
-	 $conn=connectDB();
+<?php
+
+
+
+ //the function below returns an unordered list containing the secuities related to the privileges
+function getSecurityLevel($conn,$security)
+{
 	 $query="SHOW FULL COLUMNS FROM tblprivileges";;
      $arr2=getResultFromTable($conn,$query);
      $comments=array();
@@ -32,5 +33,6 @@ $security=$_GET['value'];
        }
      }
      $popStr.="</ul>";
-     echo $popStr;
+     return $popStr;
+   }
 ?>
