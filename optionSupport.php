@@ -3,6 +3,11 @@
 //    example #1 of using the following function to generate priviledge option: 
 //    $query="SELECT DISTINCT(UserSecGroup) FROM tblprivileges order by UserSecGroup";
  //    $arr1=getResultFromTable($conn,$query);
+
+ //$query="SELECT * FROM tblusers ORDER BY UserLoginName";
+
+   //  $arr=getResultFromTable($conn,$query);
+ //foreach($arr as $record) {  
 // $pv=$record['Privilege'];
 //  $oStr=optionGen("security","secuityLevel",$arr1,$pv);
  //       echo $ $oStr;
